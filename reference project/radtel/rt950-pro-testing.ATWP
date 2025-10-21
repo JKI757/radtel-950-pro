@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <WorkBenchVersion>
+        <Version>V1.2.00</Version>
+    </WorkBenchVersion>
+    <MCUInfo>
+        <MCUSerials>AT32F403A</MCUSerials>
+        <MCUName>AT32F403AVGT7</MCUName>
+        <MCUPackage>LQFP100</MCUPackage>
+    </MCUInfo>
+    <DEBUG>
+        <Mode>
+            <ModeSub name="Debug interface" value="JTAG (5pin)"/>
+        </Mode>
+    </DEBUG>
+    <SPI1>
+        <Mode>
+            <ModeSub name="Mode" value="Full_Duplex_Master"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="TransmissionMode" value="SPI_TRANSMIT_FULL_DUPLEX"/>
+            <ParametersSub name="Mode" value="SPI_MODE_MASTER"/>
+            <ParametersSub name="FirstBit" value="SPI_FIRST_BIT_MSB"/>
+            <ParametersSub name="ClockFrequency" value="30000000"/>
+        </Parameters>
+    </SPI1>
+    <SPI2>
+        <Mode>
+            <ModeSub name="Mode" value="Full_Duplex_Master"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="TransmissionMode" value="SPI_TRANSMIT_FULL_DUPLEX"/>
+            <ParametersSub name="Mode" value="SPI_MODE_MASTER"/>
+            <ParametersSub name="FirstBit" value="SPI_FIRST_BIT_MSB"/>
+            <ParametersSub name="ClockFrequency" value="30000000"/>
+        </Parameters>
+    </SPI2>
+    <SPI3>
+        <Mode>
+            <ModeSub name="Mode" value="Full_Duplex_Master"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="TransmissionMode" value="SPI_TRANSMIT_FULL_DUPLEX"/>
+            <ParametersSub name="Mode" value="SPI_MODE_MASTER"/>
+            <ParametersSub name="FirstBit" value="SPI_FIRST_BIT_MSB"/>
+            <ParametersSub name="ClockFrequency" value="30000000"/>
+        </Parameters>
+    </SPI3>
+    <SPI4>
+        <Mode>
+            <ModeSub name="Mode" value="Full_Duplex_Master"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="TransmissionMode" value="SPI_TRANSMIT_FULL_DUPLEX"/>
+            <ParametersSub name="Mode" value="SPI_MODE_MASTER"/>
+            <ParametersSub name="FirstBit" value="SPI_FIRST_BIT_MSB"/>
+            <ParametersSub name="ClockFrequency" value="30000000"/>
+        </Parameters>
+    </SPI4>
+    <SYSTEM>
+        <Mode>
+            <ModeSub name="Time_Base" value="SysTick"/>
+        </Mode>
+    </SYSTEM>
+    <USART1>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </USART1>
+    <USART2>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </USART2>
+    <USART3>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </USART3>
+    <UART4>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </UART4>
+    <UART5>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </UART5>
+    <USART6>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </USART6>
+    <UART7>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </UART7>
+    <UART8>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </UART8>
+    <NVIC>
+        <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
+        <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
+        <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
+        <SPI1_IRQHandler>0;0;0;0;0</SPI1_IRQHandler>
+        <SPI2_I2S2EXT_IRQHandler>0;0;0;0;0</SPI2_I2S2EXT_IRQHandler>
+        <USART1_IRQHandler>0;0;0;0;0</USART1_IRQHandler>
+        <USART2_IRQHandler>0;0;0;0;0</USART2_IRQHandler>
+        <USART3_IRQHandler>0;0;0;0;0</USART3_IRQHandler>
+        <SPI3_I2S3EXT_IRQHandler>0;0;0;0;0</SPI3_I2S3EXT_IRQHandler>
+        <UART4_IRQHandler>0;0;0;0;0</UART4_IRQHandler>
+        <UART5_IRQHandler>0;0;0;0;0</UART5_IRQHandler>
+        <SPI4_IRQHandler>0;0;0;0;0</SPI4_IRQHandler>
+        <USART6_IRQHandler>0;0;0;0;0</USART6_IRQHandler>
+        <UART7_IRQHandler>0;0;0;0;0</UART7_IRQHandler>
+        <UART8_IRQHandler>0;0;0;0;0</UART8_IRQHandler>
+    </NVIC>
+    <ClockConfiguration>
+        <rtcsel>0</rtcsel>
+        <hext>8.000000</hext>
+        <hextdiv>2</hextdiv>
+        <pllhextdiv>0</pllhextdiv>
+        <pllrcs>1</pllrcs>
+        <pllmult>60</pllmult>
+        <sclkselect>1</sclkselect>
+        <ahbdiv>1</ahbdiv>
+        <apb1div>2</apb1div>
+        <apb2div>2</apb2div>
+        <usbdiv>4.0</usbdiv>
+        <hicktousb>1</hicktousb>
+        <hicktosclk>0</hicktosclk>
+        <clkout>0</clkout>
+        <clkoutdiv>1</clkoutdiv>
+        <adcdiv>6</adcdiv>
+        <systicsel>8</systicsel>
+    </ClockConfiguration>
+    <PINInfo>
+        <PinSub pinname="PE2" signalname="SPI4_SCK" signaltype="2"/>
+        <PinSub pinname="PE5" signalname="SPI4_MISO" signaltype="2"/>
+        <PinSub pinname="PE6" signalname="SPI4_MOSI" signaltype="2"/>
+        <PinSub pinname="PA0" signalname="UART4_TX" signaltype="2"/>
+        <PinSub pinname="PA1" signalname="UART4_RX" signaltype="2"/>
+        <PinSub pinname="PA2" signalname="USART2_TX" signaltype="2"/>
+        <PinSub pinname="PA3" signalname="USART2_RX" signaltype="2"/>
+        <PinSub pinname="PA5" signalname="SPI1_SCK" signaltype="2"/>
+        <PinSub pinname="PA6" signalname="SPI1_MISO" signaltype="2"/>
+        <PinSub pinname="PA7" signalname="SPI1_MOSI" signaltype="2"/>
+        <PinSub pinname="PE7" signalname="UART7_RX" signaltype="2"/>
+        <PinSub pinname="PE8" signalname="UART7_TX" signaltype="2"/>
+        <PinSub pinname="PB13" signalname="SPI2_SCK" signaltype="2"/>
+        <PinSub pinname="PB14" signalname="SPI2_MISO" signaltype="2"/>
+        <PinSub pinname="PB15" signalname="SPI2_MOSI" signaltype="2"/>
+        <PinSub pinname="PD8" signalname="USART3_TX" signaltype="2"/>
+        <PinSub pinname="PD9" signalname="USART3_RX" signaltype="2"/>
+        <PinSub pinname="PC6" signalname="USART6_TX" signaltype="2"/>
+        <PinSub pinname="PC7" signalname="USART6_RX" signaltype="2"/>
+        <PinSub pinname="PA9" signalname="USART1_TX" signaltype="2"/>
+        <PinSub pinname="PA10" signalname="USART1_RX" signaltype="2"/>
+        <PinSub pinname="PA13" signalname="DEBUG_JTMS_SWDIO" signaltype="2"/>
+        <PinSub pinname="PA14" signalname="DEBUG_JTCK_SWCLK" signaltype="2"/>
+        <PinSub pinname="PA15" signalname="DEBUG_JTDI" signaltype="2"/>
+        <PinSub pinname="PC10" signalname="SPI3_SCK" signaltype="2"/>
+        <PinSub pinname="PC11" signalname="SPI3_MISO" signaltype="2"/>
+        <PinSub pinname="PC12" signalname="SPI3_MOSI" signaltype="2"/>
+        <PinSub pinname="PB3" signalname="DEBUG_JTDO" signaltype="2"/>
+        <PinSub pinname="PB4" signalname="DEBUG_NJTRST" signaltype="2"/>
+        <PinSub pinname="PB8" signalname="UART5_RX" signaltype="2"/>
+        <PinSub pinname="PB9" signalname="UART5_TX" signaltype="2"/>
+        <PinSub pinname="PE0" signalname="UART8_RX" signaltype="2"/>
+        <PinSub pinname="PE1" signalname="UART8_TX" signaltype="2"/>
+    </PINInfo>
+    <ProjectInfomation>
+        <ProjectName>rt950-pro-testing</ProjectName>
+        <ProjectLocation>C:/Users/micro/OneDrive/Documents/radtel</ProjectLocation>
+        <ToolchainIDE>CMake</ToolchainIDE>
+        <ARMCompiler>0</ARMCompiler>
+        <KeepUserCode>true</KeepUserCode>
+        <NotUsedPinAnalog>true</NotUsedPinAnalog>
+        <CodeSplitIP>true</CodeSplitIP>
+        <AddNecessaryFileFlag>false</AddNecessaryFileFlag>
+        <MinHeapSize>0x200</MinHeapSize>
+        <MinStackSize>0x400</MinStackSize>
+        <UseFirmware>true</UseFirmware>
+        <PackageVersion>V2.2.1</PackageVersion>
+    </ProjectInfomation>
+</Root>

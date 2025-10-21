@@ -1,0 +1,14 @@
+Radtel Peripheral & Pin Summary
+
+| Module | Peripheral / Base | Pins & Signals | Key Firmware Functions | Notes |
+| --- | --- | --- | --- | --- |
+| BK4829 #1 (HW SPI) | SPI1 @ 0x40013000<br>Data: 0x4001300C | PB12 CS via GPIOB BSRR 0x40010C10 / BRR 0x40010C14 | spi_xfer_byte(FUN_8002112c), BK4829_init(FUN_80007f04), RF_Set_Frequency_Synthesizer(FUN_8000b62c) | Historical capture showed PB4 (mask 0x10); current firmware drives PB12 (mask 0x1000). |
+| BK4829 #2 (SW SPI) | GPIOA bit-bang @ 0x40010800<br>SCR 0x40010810 / CLR 0x40010814 | PA5 CS, PA6 SCLK, PA7 MOSI | Software_SPI_Write_Byte(FUN_80021234),  Software_SPI_Write_Block(FUN_80021290), Software_SPI_FlashErase4K (FUN_800210c0), Software_SPI_FlashErase32KBlock (FUN_80020f80), Software_SPI_FlashErase64KBlock (FUN_80020ff0) | Second RF front-end path written over GPIO toggles. |
+| SI4732 (Bit-bang I2C) | GPIOA bit-bang | PA8 SCL, PA9 SDA | (pending rename) | Lines shared with discrete I2C routine; no hardware I2C peripheral observed. |
+| Keypad Matrix | GPIOC/PD/PE/PA | PC0-3 column drive, PD4-7 row sense, PE5 scan enable, PA12 latch sense | Keypad_ScanMatrix (FUN_80013618), FUN_80012c20, FUN_80012c26 | Rows read from DAT_800136dc (GPIOD IDR) and decoded for 0x70/0xB0/0xD0/0xE0 patterns. |
+| Rotary Encoder | GPIOB | PB4 phase A, PB5 phase B | Encoder_HandleQuadrature (FUN_8000e2e0), FUN_8000e42c | State machine samples masks 0x10 / 0x20 and debounces transitions. |
+| PTT / RF Path Control | GPIOE / GPIOB | PE13 primary PTT, PE12 external PTT, PE14 PA gate, PE7 mic toggle, PB0/PB1 accessory | PTT_Relay_Select (FUN_8001ab04) | Selects TX/RX relay combinations based on parameters; clears PB0/PB1 when idle. |
+| Band / Relay SPI | GPIOE bit-bang | PE15 latch, PE10 clock, PE11 data in, PE8 secondary latch | Band_Relay_ShiftIn (FUN_8001c04c), FUN_8001c68c, FUN_8001c758 | Serial shift interface for RF filter relays; reads back status then programs new codes. |
+| Analog Front-End (ADC) | ADC2 @ 0x40012800 | PA1 channel 1, PA0 channel 0 | ADC_Read_PA1 (FUN_80013c98), ADC_Read_PA0 (FUN_80013cd4), FUN_80003108, FUN_800030a4, FUN_8000309e | Single-shot conversions with 7-cycle sample time; used for audio/AGC sensing. |
+| Analog Front-End (DAC) | DAC @ 0x40007400 | Internal outputs (routed to audio chain) | DAC_Channel_Enable (FUN_8000b368), FUN_8000b388, FUN_8000b3a8 | Enables channels and loads sample registers before playback. |
+| Display Interface | DMA2 + GPIOD[15:8] 8080 bus | PD8-15 data, PD0 WR, PD1 CS, PD3 D/C; PC12 strobe/backlight | Display_BufferFlush (FUN_800037b0), LCD_WriteCommand (FUN_800271c0), LCD_WriteData (FUN_80027220), LCD_SetWindow (FUN_8001cb52), LCD_BlitRectangle (FUN_800156dc) | 16-bit RGB565; 320x240 frame buffer @ 0x20000BD0; DMA2 (0x40020430) streams rows to LCD. |
