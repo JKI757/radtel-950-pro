@@ -23,15 +23,6 @@ This repository collects notes, tooling, and extracted firmware artifacts for th
 ├── artery_cortex-m4/         # AT32 BSP / SDK manuals
 ```
 
-## Reverse Engineering Workflow
-
-1. **Firmware Extraction**: Dump the MCU flash (e.g. SEGGER J-Link, STLink) and place raw images under `firmware/firmware dumps/`. Keep pristine copies before patching.
-2. **Decryption / Unpacking**: If the vendor image is encrypted, record the steps and scripts under `firmware/decrypted-firmware/`.
-3. **Static Analysis**:
-   - Import binaries into Ghidra using the AT32F403A SVD from `firmware/RE/SVDs/` for auto-labelling peripherals.
-   - Use `docs/Function_Names.csv` and `firmware/RE/gemini_remap.csv` to propagate better names.
-   - Update `docs/pinout.md` or `docs/display.md` whenever a new GPIO/function relationship is confirmed.
-4. **Dynamic Analysis (optional)**: Attach a debugger to capture live register traces, or log buses (SPI/I2C/UART) to confirm protocols before rewriting drivers.
 
 ## Hardware Notes
 
