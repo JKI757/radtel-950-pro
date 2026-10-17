@@ -63,4 +63,6 @@ The panel ID, display reset, SI4732 pins, ADC input roles, and safe RF relay idl
 
 ## REA result
 
-REA 6.5.0 was installed in a temporary directory and tested with this image. Its ordinary artifact check rejected the headerless file. Its raw Ghidra path rejected the installed Ghidra 11.3 because REA requires Ghidra 12.1.x. REA's [raw binary guide](https://github.com/morluto/rea/blob/main/docs/raw-binary.md) also lists Cortex-M and Thumb-only targets as unsupported. REA supplied no pin evidence in this review.
+REA 6.5.0 is installed in a temporary directory. An earlier test found that its ordinary artifact check rejected this headerless image and that Ghidra 11.3 was too old for its Ghidra provider.
+
+On 2026-10-17, a new check found Ghidra 12.1.4 at `/Applications/ghidra_12.1.4_PUBLIC`. REA accepted its version, headless launcher, and Java runtime. Its provider check still failed because this Ghidra installation has no executable native decompiler for macOS arm64. A raw-image `rea inspect` call stopped at that check. REA's [raw binary guide](https://github.com/morluto/rea/blob/main/docs/raw-binary.md) also lists Cortex-M and Thumb-only targets as unsupported. Adding the [native decompiler](https://github.com/morluto/rea/blob/main/docs/installation.md) would resolve one setup fault, but would not make this raw Cortex-M image a supported REA target. REA supplied no new pin evidence. Direct Ghidra analysis remains available.
