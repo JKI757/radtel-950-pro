@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj": {}
+  },
+  "projects": {
+    "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj",
+        "projectName": "RT-950_UPDATE",
+        "projectPath": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj",
+        "packagesPath": "/Users/josh/.nuget/packages/",
+        "outputPath": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/Users/josh/Library/Application Support/Godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/josh/.nuget/NuGet/NuGet.Config",
+          "/Users/josh/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net20"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net20": {
+            "targetAlias": "net20",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net20": {
+          "targetAlias": "net20",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

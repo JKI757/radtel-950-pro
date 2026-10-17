@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EU+d3lmYFN0=",
+  "success": true,
+  "projectFilePath": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj",
+  "expectedPackageFiles": [
+    "/Users/josh/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/Users/josh/.nuget/packages/microsoft.netframework.referenceassemblies.net20/1.0.3/microsoft.netframework.referenceassemblies.net20.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

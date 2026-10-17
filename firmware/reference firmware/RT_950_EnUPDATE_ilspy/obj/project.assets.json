@@ -1,0 +1,161 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v2.0": {
+      "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies.net20": "1.0.3"
+        }
+      },
+      "Microsoft.NETFramework.ReferenceAssemblies.net20/1.0.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NETFramework.ReferenceAssemblies.net20.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
+      "sha512": "vUc9Npcs14QsyOD01tnv/m8sQUnGTGOw1BCmKcv77LBJY7OxhJ+zJF7UD/sCL3lYNFuqmQEVlkfS4Quif6FyYg==",
+      "type": "package",
+      "path": "microsoft.netframework.referenceassemblies/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+        "microsoft.netframework.referenceassemblies.nuspec"
+      ]
+    },
+    "Microsoft.NETFramework.ReferenceAssemblies.net20/1.0.3": {
+      "sha512": "mvyTeaG1dVyCx24hjVnqk1YvR4fwS1fHxt1tdnzWMGCHc09mvNVGF+8VAobWSDi+iDz6fgJ7jE5d/mWap4PYoA==",
+      "type": "package",
+      "path": "microsoft.netframework.referenceassemblies.net20/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/.NETFramework/v2.0/Accessibility.dll",
+        "build/.NETFramework/v2.0/AspNetMMCExt.dll",
+        "build/.NETFramework/v2.0/CustomMarshalers.dll",
+        "build/.NETFramework/v2.0/IEExecRemote.dll",
+        "build/.NETFramework/v2.0/IEHost.dll",
+        "build/.NETFramework/v2.0/IIEHost.dll",
+        "build/.NETFramework/v2.0/ISymWrapper.dll",
+        "build/.NETFramework/v2.0/Microsoft.Build.Engine.dll",
+        "build/.NETFramework/v2.0/Microsoft.Build.Framework.dll",
+        "build/.NETFramework/v2.0/Microsoft.Build.Tasks.dll",
+        "build/.NETFramework/v2.0/Microsoft.Build.Utilities.dll",
+        "build/.NETFramework/v2.0/Microsoft.JScript.dll",
+        "build/.NETFramework/v2.0/Microsoft.VisualBasic.Compatibility.Data.dll",
+        "build/.NETFramework/v2.0/Microsoft.VisualBasic.Compatibility.dll",
+        "build/.NETFramework/v2.0/Microsoft.VisualBasic.Vsa.dll",
+        "build/.NETFramework/v2.0/Microsoft.VisualBasic.dll",
+        "build/.NETFramework/v2.0/Microsoft.VisualC.dll",
+        "build/.NETFramework/v2.0/Microsoft.Vsa.Vb.CodeDOMProcessor.dll",
+        "build/.NETFramework/v2.0/Microsoft.Vsa.dll",
+        "build/.NETFramework/v2.0/Microsoft_VsaVb.dll",
+        "build/.NETFramework/v2.0/RedistList/FrameworkList.xml",
+        "build/.NETFramework/v2.0/SubsetList/Client.xml",
+        "build/.NETFramework/v2.0/System.Configuration.Install.dll",
+        "build/.NETFramework/v2.0/System.Configuration.dll",
+        "build/.NETFramework/v2.0/System.Data.OracleClient.dll",
+        "build/.NETFramework/v2.0/System.Data.SqlXml.dll",
+        "build/.NETFramework/v2.0/System.Data.dll",
+        "build/.NETFramework/v2.0/System.Deployment.dll",
+        "build/.NETFramework/v2.0/System.Design.dll",
+        "build/.NETFramework/v2.0/System.DirectoryServices.Protocols.dll",
+        "build/.NETFramework/v2.0/System.DirectoryServices.dll",
+        "build/.NETFramework/v2.0/System.Drawing.Design.dll",
+        "build/.NETFramework/v2.0/System.Drawing.dll",
+        "build/.NETFramework/v2.0/System.EnterpriseServices.Thunk.dll",
+        "build/.NETFramework/v2.0/System.EnterpriseServices.Wrapper.dll",
+        "build/.NETFramework/v2.0/System.EnterpriseServices.dll",
+        "build/.NETFramework/v2.0/System.Management.dll",
+        "build/.NETFramework/v2.0/System.Messaging.dll",
+        "build/.NETFramework/v2.0/System.Runtime.Remoting.dll",
+        "build/.NETFramework/v2.0/System.Runtime.Serialization.Formatters.Soap.dll",
+        "build/.NETFramework/v2.0/System.Security.dll",
+        "build/.NETFramework/v2.0/System.ServiceProcess.dll",
+        "build/.NETFramework/v2.0/System.Transactions.dll",
+        "build/.NETFramework/v2.0/System.Web.Mobile.dll",
+        "build/.NETFramework/v2.0/System.Web.RegularExpressions.dll",
+        "build/.NETFramework/v2.0/System.Web.Services.dll",
+        "build/.NETFramework/v2.0/System.Web.dll",
+        "build/.NETFramework/v2.0/System.Windows.Forms.dll",
+        "build/.NETFramework/v2.0/System.Xml.dll",
+        "build/.NETFramework/v2.0/System.dll",
+        "build/.NETFramework/v2.0/cscompmgd.dll",
+        "build/.NETFramework/v2.0/mscorlib.dll",
+        "build/.NETFramework/v2.0/sysglobl.dll",
+        "build/Microsoft.NETFramework.ReferenceAssemblies.net20.targets",
+        "microsoft.netframework.referenceassemblies.net20.1.0.3.nupkg.sha512",
+        "microsoft.netframework.referenceassemblies.net20.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v2.0": [
+      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.3"
+    ]
+  },
+  "packageFolders": {
+    "/Users/josh/.nuget/packages/": {},
+    "/Users/josh/Library/Application Support/Godot/mono/GodotNuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj",
+      "projectName": "RT-950_UPDATE",
+      "projectPath": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/RT-950_EnUPDATE.csproj",
+      "packagesPath": "/Users/josh/.nuget/packages/",
+      "outputPath": "/Users/josh/Documents/Code/Radio_Code/Radtel/firmware/reference firmware/RT_950_EnUPDATE_ilspy/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/Users/josh/Library/Application Support/Godot/mono/GodotNuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/josh/.nuget/NuGet/NuGet.Config",
+        "/Users/josh/.nuget/NuGet/config/Godot.Offline.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net20"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net20": {
+          "targetAlias": "net20",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net20": {
+        "targetAlias": "net20",
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.3, )",
+            "autoReferenced": true
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
