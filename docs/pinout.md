@@ -16,3 +16,89 @@ Radtel Peripheral & Pin Summary
 | Analog Front-End (ADC) | ADC2 @ 0x40012800 | PA1 channel 1, PA0 channel 0 | ADC_Read_PA1 (FUN_80013c98), ADC_Read_PA0 (FUN_80013cd4), FUN_80003108, FUN_800030a4, FUN_8000309e | Single-shot conversions with 7-cycle sample time; used for audio/AGC sensing. |
 | Analog Front-End (DAC) | DAC @ 0x40007400 | Internal outputs (routed to audio chain) | DAC_Channel_Enable (FUN_8000b368), FUN_8000b388, FUN_8000b3a8 | Enables channels and loads sample registers before playback. |
 | Display Interface | DMA2 + GPIOD[15:8] 8080 bus | PD8-15 data, PD0 WR, PD1 CS, PD3 D/C; PC12 strobe/backlight | Display_BufferFlush (FUN_800037b0), LCD_WriteCommand (FUN_800271c0), LCD_WriteData (FUN_80027220), LCD_SetWindow (FUN_8001cb52), LCD_BlitRectangle (FUN_800156dc) | 16-bit RGB565; 320x240 frame buffer @ 0x20000BD0; DMA2 (0x40020430) streams rows to LCD. |
+
+
+  
+PA0 = VOX DETECT  
+PA1 = BATTERY DETECT  
+PA2 = SINGLE IN  
+PA3 = BT UART IN  
+PA4 = BEEP OUT  
+PA5 = APC  
+PA6 = FM RESET  
+PA7 = V3FM EN  
+PA8 = GPS ENABLE  
+PA9 = BLUETOOTH RX  
+PA10 = BLUETOOTH TX  
+PA11 = DEVICE POWER OFF  
+PA12 = SK 4?  
+PA13 = SW SDA  
+PA14 = SW CLK  
+PA15 = REPLAY  
+  
+
+PB0 = V3R ENABLE  
+PB1 = V3T ENABLE  
+PB2 = V3RX ENNABLE  
+PB3 = KEYPAD LIGHT  
+PB4 = EC1  
+PB5 = EC2  
+PB6 = SI4732 SCK  
+PB7 = SI4732 SDA  
+PB8 = MICROPHONE ENABLE  
+PB9 = LB POWER ENABLE  
+PB10 = GPS RX  
+PB11 = GPS TX  
+PB12 = FLASH CS  
+PB13 = FLASH SCK  
+PB14 = FLASH MISO  
+PB15 = FLASH MOSI  
+
+  
+PC0 = KEYPAD RAS 0  
+PC1 = KEYPAD RAS 1  
+PC2 = KEYPAD RAS 2  
+PC3 = KEYPAD RAS 3  
+PC4 = RF BAND RELAY??  
+PC5 = VSW ENABLE  
+PC6 = LCD BACKLIGHT  
+PC7 = PTT DETECT  
+PC8 = SIDEPORT RX DETECT ??  
+PC9 = SIDEPORT PTT ??  
+PC10 = UART TX  
+PC11 = UART RX  
+PX12 = BEEP SW  
+PC13 = RED LED  
+PC14 = GREEN LED  
+PC15 = SIDEPORT EXTERNAL SPEAKER DETECTED ??  
+
+  
+
+PD0 = LCD SDA  
+PD1 = LCD CS  
+PD2 = LCD RESET  
+PD3 = LCD RS  
+PD4 = KEYPAD CAS 3  
+PD5 = KEYPAD CAS 2  
+PD6 = KEYPAD CAS 1  
+PD7 = KEYPAD CAS 0  
+PD8 TO PD15 = PARALLEL DATA LINES TO LCD  
+  
+
+
+PE0 = POWER SWITCH  
+PE1 = SPEAKER MUTE  
+PE2 = PTT 2  
+PE3 = PTT  
+PE4 = POWER AMP ENABLE  
+PE5 = SIDE KEY 1  
+PE6 = EXTERNAL PTT  
+PE7 = U3T EN  
+PE8 = BK4819 SEN1  
+PE9 = SW TO BT ??  
+PE10 = BK4819 SCK  
+PE11 = BK4819 SDA  
+PE12 = U3R ENABLE  
+PE13 = U6R ENABLE  
+PE14 = SW3T ENABLE  
+PE15 = BK4819 SEN2  
