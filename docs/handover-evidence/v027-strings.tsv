@@ -1,0 +1,468 @@
+0x08005820	INFINITY
+0x080058bc	Invalid Operation
+0x080058d0	Divide By Zero
+0x080058e0	Overflow
+0x080058ec	Underflow
+0x080058f8	Inexact Result
+0x08005908	SIGFPE: Arithmetic exception:
+0x08005cf9	~}|{zyxwvvutsrqqponnmllkjjihhgffeddccbaa``__^^]]\\[[ZZYYXXWWVVUUUTTSSRRRQQPPPOOONNMMMLLLKKKJJJIIIHHHGGGGFFFEEEDDDDCCCCBBBBAAA
+0x08007033	Beacon List
+0x08007054	%s-%d
+0x08007068	%02d:%02d
+0x08007484	T:%02d:%02d:%02d
+0x080074b8	H:--.--
+0x080075d0	H:%d.%dm
+0x080075e4	H:%.3fft
+0x08007a88	%s-%d
+0x08007a90	%2d/%2d
+0x08007ab4	%.0fm
+0x08007ac0	%.1fnm
+0x08007acc	%.1fmp
+0x08007ad8	%.1fkm
+0x08007ae8	%02d:%02d
+0x08007b00	%dKm/h
+0x08007b2c	%.1fKn
+0x08007b38	%.1fMPH
+0x08007b40	-Km/h
+0x08007f60	-MPH
+0x08007fc8	%.1fft
+0x08007fd0	| STATUS TEXT |
+0x08007fe0	| COMMENT TEXT |
+0x080081a8	| RAW DATA |
+0x080085f7	Real Time Beacon
+0x08008623	CALL:
+0x08008638	%dKm/h
+0x08008640	No Data
+0x08008684	TIME:
+0x0800868c	%02d:%02d:%02d
+0x0800869c	DATE:
+0x080086a4	%d.%d
+0x080086c8	PATH INFO:
+0x08008b10	| STATUS TEXT |
+0x08008b20	| COMMENT TEXT |
+0x08008b34	| RAW DATA |
+0x08008b5c	%.1fKn
+0x08008b6c	%.1fMPH
+0x08008b90	%.3fft
+0x08008f10	%.0fm
+0x08008f1c	%.3fnm
+0x08008f28	%.3fmp
+0x08008f34	%.3fkm
+0x08008f3f	LONG:
+0x0800d244	$PCAS03,5,0,0,0,0,3,7,60*
+0x0800da03	All Band Test Mode
+0x0800dae8	Super Mode
+0x0800dbc8	%03d.%05d
+0x0800df30	VFO Mode
+0x0800df40	CH Mode
+0x0800df4c	CH-%03d
+0x0800df5c	%03d.%05d
+0x0800e080	Zone%d
+0x0800e0e8	%03d.%05d
+0x0800e58c	%02d:%02d
+0x0800e91c	%03d.%05d
+0x0800ea2b	Voltage
+0x0800eaa4	Program...
+0x0800ec60	+%02d
+0x0800ed3c	D%03oI
+0x0800ed48	D%03oN
+0x0800ed54	%d.%dHz
+0x0800ed60	%*.*s
+0x0800eeb0	%d.%05d
+0x0800ef50	%-*.*s
+0x0800f0eb	%s %s
+0x0800fdc8	Hardware:UV850PRO
+0x0800fddc	Hardware:BJ9000
+0x08010078	%03d.%05d
+0x080112f3	DCS SCAN
+0x08011303	CTCSS SCAN
+0x08011e83	Unnamed CH
+0x08013a3c	%02d.%03d
+0x08013a48	%03d.%02d
+0x080141d3	Unknow
+0x080143af	FM Initialization
+0x080143c4	Please Wait...
+0x0801583b	Bright
+0x08015858	%dmin
+0x0801598c	%s %d
+0x080159f0	CH-%03d
+0x08015e03	CH-%02d  %d
+0x08015e24	CH-%02d %3d.%02d
+0x08015ef3	Encryption
+0x08015f00	%s %d
+0x0801634f	Manual
+0x08016654	CODE %d
+0x08016750	%s %d
+0x08019e9f	About Machine
+0x08019f10	UV850PRO-%s
+0x0801a054	%-*.*s
+0x0801a06c	%*.*s
+0x0801a074	%*.*s
+0x0801a13b	Please close the
+0x0801a150	AB RPT-Mode
+0x0801a22b	Please keeep the
+0x0801a240	bluetooth open!
+0x0801a307	Channel is invalid
+0x0801a3d3	Clear Data OK
+0x0801a5f7	No Available Zone!
+0x0801a6d3	APRS activation of
+0x0801a6e8	CDCSS is invalid
+0x0801a867	Minute range 0-59
+0x0801a87c	Longitude range
+0x0801a88c	0-180 degrees
+0x0801a8ac	Second range 0-59
+0x0801a8d0	Latitude range
+0x0801a8e0	0-90 degrees
+0x0801a997	The device will restart
+0x0801a9b0	Please confirm that the
+0x0801a9c8	antenna has been replaced!
+0x0801aaaf	Save OK
+0x0801ab6b	Data Error
+0x0801abfb	FM Initialization
+0x0801ac10	Please Wait...
+0x0801acb7	Channel work mode changed!
+0x0801acd4	The device will restart
+0x0801aee4	%-*.*s
+0x0801b670	%*.*s
+0x0801cd4c	D%03oN
+0x0801cd58	%d.%0.1d
+0x0801cd68	NONE
+0x0801ce80	RUNNING
+0x08021cac	SEARCH
+0x08021eb4	NONE
+0x08023340	%03ddBm
+0x08023648	%03d.%05d
+0x08024683	Please Wait...
+0x08025fd8	WX-%02d
+0x080284bc	Emergency
+0x080284cb	Unknown
+0x080284d8	OMIC-E
+0x080284e0	TH-D72
+0x080284e8	TH-D74
+0x080284f0	TH-D75
+0x080284f8	TH-D7A
+0x08028500	TM-D710
+0x08028508	TM-D700
+0x08028518	FTM-350
+0x08028520	VX-8G
+0x08028530	FTM-400DR
+0x0802853c	FTM-100D
+0x08028560	FTM-300D
+0x0802856c	FTM-500D
+0x08028578	AP510
+0x08028580	D578UV
+0x08028588	GMic-Emsg
+0x08028594	D878UV
+0x0802859c	TinyTrack3
+0x080285a8	TinyTrack4
+0x08028644	DR-7400
+0x0802864c	DR-7800
+0x08028654	Unknown
+0x080292e0	%2d%2d%f,%2d,%2d,%4d
+0x0802fb47	UPDATE
+0x0802fb4e	PROGRAMBT9000U
+0x080302f1	Hello world!
+0x080378fc	!"#$%&'()*+,-./0123456789:;<=?@ABCDEFGHIJKLMNOPQSTUVWXYZ\]^_`acdefghijklmnopqrstuvwxyz{|}~
+0x08037974	Factory
+0x0805c072	GGAVTGZDATXT0123456789ABCDEF
+0x0805c894	0123456789ABCDEF@0X
+0x0805c8a8	0123456789abcdef@0x
+0x0805ca44	Enroute
+0x0805ca50	Special
+0x0805ca5c	Custom-0
+0x0805ca68	Custom-1
+0x0805ca74	Custom-2
+0x0805ca80	Custom-3
+0x0805ca8c	Custom-4
+0x0805ca98	Custom-5
+0x0805caa4	Custom-6
+0x0805cab0	Priority
+0x0805cabc	Off duty
+0x0805cae8	Committed
+0x0805caf4	Returning
+0x0805cb00	Emergency
+0x0805cb8c	In Service
+0x0805cbf8	chang
+0x0805cc00	chuang
+0x0805cc1c	cheng
+0x0805cc34	chong
+0x0805cc94	chuan
+0x0805cdd0	guang
+0x0805cdd8	huang
+0x0805ce9c	jiang
+0x0805cea4	liang
+0x0805cebc	kuang
+0x0805cedc	jiong
+0x0805cfb8	niang
+0x0805d0b0	shang
+0x0805d0d8	shuang
+0x0805d0e0	sheng
+0x0805d110	qiong
+0x0805d18c	shuan
+0x0805d2dc	zhang
+0x0805d2e4	xiang
+0x0805d334	zhong
+0x0805d33c	xiong
+0x0805d44d	Edit Callsign
+0x0805d475	Edit Digi1 Path
+0x0805d4a1	Path Choose
+0x0805d4bd	Fixed position
+0x0805d4e1	Degrees
+0x0805d4f5	Minute
+0x0805d509	Second
+0x0805d51d	Longitude WE Set
+0x0805d541	Latitude NS Set
+0x0805d565	Fixed altitude
+0x0805d585	Set Longitude
+0x0805d595	Set Latitude
+0x0805d5bd	Send Message
+0x0805d5d9	Message Edit
+0x0805d5f5	Stations Symbol
+0x0805d616	Slect Icon
+0x0805d631	MIC-E Type
+0x0805d65d	Digi1 SSID
+0x0805d66d	Digi2 SSID
+0x0805d695	Digi1 Path
+0x0805d6a5	Digi2 Path
+0x0805d6bd	Message
+0x0805d6c9	User Path
+0x0805d6d5	Callsign
+0x0805d6e1	Source Position
+0x0805d6f5	My Position
+0x0805d705	Custom Icons
+0x0805d765	Beacon Type
+0x0805d781	Timing Time
+0x0805d79d	DIGI CH
+0x0805d7b9	Routing
+0x0805d7d5	DIGI Tx Wait
+0x0805d7f5	APRS CH
+0x0805d80d	APRS Tx Delay
+0x0805d82d	APRS Mute
+0x0805d849	APRS Ringer
+0x0805d869	RX Popup
+0x0805d885	RX Popup Time
+0x0805d8a5	TNC Type
+0x0805d8c1	TX Data Reporting APP
+0x0805d8ea	Sure to Reset?
+0x0805d90d	Factory Setting
+0x0805d921	RX Beacon Clear
+0x0805d955	APRS ON/OFF
+0x0805d985	Position
+0x0805d9a1	Time Zone
+0x0805d9b9	Distance Unit
+0x0805d9d5	Altitude Unit
+0x0805d9f1	Speed Unit
+0x0805da0d	Advanced
+0x0805da19	Repeater Setting
+0x0805da2d	Beacon Setup
+0x0805da3d	Beacon List
+0x0805da89	Language
+0x0805daa0	Sure to Reset?
+0x0805dabe	Reset
+0x0805dad5	VFO Mode
+0x0805dae1	Reset All
+0x0805db01	CH-Edit Name
+0x0805db21	CH-Memory
+0x0805db39	CH-Delete
+0x0805dbad	Direction
+0x0805dbc5	Offset
+0x0805dbdd	RX Modulation
+0x0805dbfd	Scan Add
+0x0805dc85	FHSS CODE
+0x0805dc9d	Encryption
+0x0805dcdd	Scan Memory
+0x0805dcfd	CTCSS DCS
+0x0805dd09	Scan SubCode
+0x0805dd39	TAIL
+0x0805dd4d	Battery Save
+0x0805dd69	Standby Set
+0x0805dd85	SOS Mode
+0x0805dd9d	Scan Mode
+0x0805ddb5	Back Light
+0x0805ddd1	Beep Prompt
+0x0805dded	Voice
+0x0805de01	Menu OutTime
+0x0805de21	Keypad Lock
+0x0805de41	Power On Display
+0x0805de61	Breath Led
+0x0805de7d	Power Dly Time
+0x0805dea1	NOAA Alert
+0x0805ded1	Busy Lockout
+0x0805deed	Trans Power
+0x0805df09	Bandwidth
+0x0805df35	RP-STE
+0x0805df75	R-TONE
+0x0805df91	S-CODE
+0x0805dfd9	ROGER
+0x0805e009	Long Press PF1
+0x0805e03d	Long Press PF2
+0x0805e06d	[0] Long Press
+0x0805e091	[1] Long Press
+0x0805e0b5	[2] Long Press
+0x0805e0d9	[3] Long Press
+0x0805e0fd	[4] Long Press
+0x0805e121	[5] Long Press
+0x0805e145	[6] Long Press
+0x0805e169	[7] Long Press
+0x0805e18d	[8] Long Press
+0x0805e1b1	[9] Long Press
+0x0805e1c5	VOX Delay
+0x0805e1dd	VOX Level
+0x0805e1f5	VOX Switch
+0x0805e211	Scramble
+0x0805e229	Cross Band Repeat
+0x0805e24d	RPT-Speaker
+0x0805e269	Work Band
+0x0805e281	Mic Gain
+0x0805e29d	Radio Interrupt
+0x0805e2c1	Single Ptt Mode
+0x0805e2e1	DTMF PTT Delay
+0x0805e305	DTMF On Time
+0x0805e329	DTMF Off Time
+0x0805e35d	Zone Or Channel
+0x0805e381	Zone Select
+0x0805e39d	Bluetooth
+0x0805e3c2	CTCSS DCS
+0x0805e3da	Signaling
+0x0805e3ea	Setting
+0x0805e3f6	Bluetooth
+0x0805e406	APRS Set
+0x0805e412	Radio Set
+0x0805e422	About
+0x0805e436	User Key
+0x0805e4c9	.Work Band
+0x0805e4e1	.FM Memery-CH
+0x0805e4fd	.Modulation
+0x0805e519	.Frequency Step
+0x0805e539	.Bandwidth
+0x0805e579	.FM Backlight
+0x0805e5a5	Temp Scan List
+0x0805e5c8	House QTH(VHF)
+0x0805e5d8	Truck(18Wheel)
+0x0805e5e8	X-APRS(Unix)
+0x0805e5f8	CHANNEL NUM.
+0x0805e610	TONE1200
+0x0805e62c	Level 1
+0x0805e644	WIDE1-1,WIDE2-1
+0x0805e684	Level 2
+0x0805e6ac	WIDE1,WIDE2
+0x0805e6c8	Level 3
+0x0805e6f8	Level 4
+0x0805e7cc	VOLTAGE
+0x0805e7e4	PICTURE
+0x0805e7f4	SQUELCH
+0x0805e7fc	SEARCH
+0x0805e804	GPS SWITCH
+0x0805e810	APRS SWITCH
+0x0805e828	BLUETOOTH
+0x0805e8c4	SPECTRUM
+0x0805e8d8	RX MODULATION
+0x0805e8f0	RADIO
+0x0805e900	FREQ STEP
+0x0805e914	DECODER
+0x0805e91c	ENCODER
+0x0805e924	TRANSFER
+0x0805e930	ROGER
+0x0805e938	TX POWER
+0x0805e944	FREQ DIR
+0x0805e97c	CTCSS DCS
+0x0805e98c	MacAPRS
+0x0805e994	WinAPRS
+0x0805e9b0	ZONE SELECT
+0x0805e9bc	STANDBY SET
+0x0805e9c8	FREQ OFFSET
+0x0805e9dc	SCAN QT
+0x0805e9ec	DT-ST
+0x0805e9f4	TEMPORARY SCAN LIST
+0x0805ea20	TONE TX
+0x0805ea28	Beacon TX
+0x0805ea34	EMERGENCY
+0x0805ea40	FREQUENCY
+0x0805ea4c	CH-MEMORY
+0x0805eaf8	Dish Antenna
+0x0805eb10	Railroad
+0x0805eb20	USER User-defined
+0x0805eb34	Committed
+0x0805eb40	LW Band
+0x0805eb48	MW Band
+0x0805eb50	SW Band
+0x0805eb58	Degrees And Minute And Second
+0x0805eb78	Send Sound
+0x0805eb84	Campground
+0x0805eb90	Police
+0x0805eb98	Ambulance
+0x0805ebac	Send Code
+0x0805ebb8	Zone Mode
+0x0805ebcc	[/R] Vehicle
+0x0805ebdc	Farm Vehicle
+0x0805ebec	REC.Vehicle
+0x0805ebf8	[/b] Bicycle
+0x0805ec08	Motorcycle
+0x0805ec14	Middle
+0x0805ec1c	Triangle
+0x0805ec28	Sea Mile
+0x0805ec34	Snowmobile
+0x0805ec40	[/[] People
+0x0805ec4c	Space Shuttle
+0x0805ec6c	Phone
+0x0805ec7c	Grid Square
+0x0805ec90	HC Future
+0x0805ec9c	Horse
+0x0805eca4	Delete
+0x0805ecac	NWS Site
+0x0805ecb8	On Site
+0x0805ecc0	Mobile Satellite
+0x0805ecd4	Degrees And Minute
+0x0805ece8	En Route
+0x0805ecf4	Returning
+0x0805ed08	Search
+0x0805ed18	English
+0x0805ed28	Fire Truck
+0x0805ed34	Truck
+0x0805ed3c	Special
+0x0805ed44	Normal
+0x0805ed4c	Hospital
+0x0805ed58	Full Channel
+0x0805ed68	Hotel
+0x0805ed78	Eyeball
+0x0805ed80	School
+0x0805edd8	Timing Beacon
+0x0805ede8	Manual Beacon
+0x0805edf8	Smart Beacon
+0x0805ee08	NTS Station
+0x0805ee14	WX Station
+0x0805ee20	Aid Station
+0x0805ee2c	Water Station
+0x0805ee3c	GPS Position
+0x0805ee4c	Fixed Position
+0x0805ee5c	Balloon
+0x0805ee7c	Truck Stop
+0x0805ee88	Laptop
+0x0805ee9c	Glider
+0x0805eea4	Carrier
+0x0805eeac	Super
+0x0805eeb4	PC user
+0x0805eebc	Repeater
+0x0805eec8	Meter
+0x0805eed0	Helicopter
+0x0805eedc	DX Cluster
+0x0805eee8	Rover
+0x0805eef0	File Server
+0x0805eefc	Wheelchair
+0x0805ef08	Degrees
+0x0805ef58	Red Cross
+0x0805ef64	Boy Scouts
+0x0805ef7c	Minus
+0x0805ef84	S-Aricraft
+0x0805ef90	Aircraft
+0x0805efa4	Red Dot
+0x0805efb4	Fire dept
+0x0805efc0	Command Post
+0x0805efd4	Narrow
+0x0805efdc	HF Gateway
+0x0805efe8	Priority
+0x0805eff4	Off duty
+0x0805f490	Devices Empty!
+0x0805f4bc	Hardware:
+0x0805f4c8	Software:
+0x0805f4d4	CallSign:

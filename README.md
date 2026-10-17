@@ -4,10 +4,12 @@ This repository contains hardware notes, firmware data, and tools for the Radtel
 
 ## Hardware Data
 
-- [Pinout notes](docs/pinout.md) list MCU pins, signals, and firmware functions. Some entries need a check on the hardware.
+- [Pinout notes](docs/pinout.md) separate V0.27 firmware checks from reported board tests. The [earlier pin list](docs/pinout-legacy.md) remains available.
 - [Pinout slides](docs/pinout.pptx) show the pin data in a visual format.
 - [RT950Pro RF schematic](docs/RT950Pro.pdf) shows RF circuits and signal names.
 - [Display notes](docs/display.md), [SPI flash notes](docs/spi_flash.md), and [audio notes](docs/audio_tones.md) record findings from firmware analysis.
+- [V0.27 analysis](docs/rt950-v027-analysis.md) records image checks, pin evidence, and open questions. The [evidence directory](docs/handover-evidence/README.md) contains analysis data, selected decompiled C, and a Ghidra project.
+- [Screen photos](docs/screenshots/README.md) show the radio user interface during several operations.
 - [AT32F403A data sheet](Datasheets/DS_AT32F403A_V2.04_EN.pdf) and [AT32F403A/407 reference manual](Datasheets/RM_AT32F403A_407_V2.07_EN.pdf) give MCU data.
 
 ## Firmware Data and Tools

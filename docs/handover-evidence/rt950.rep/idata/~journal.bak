@@ -1,0 +1,2 @@
+IADD:00000001:/bootloader.bin
+IDSET:/bootloader.bin:c0a868cee0578496005474208

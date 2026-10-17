@@ -1,104 +1,37 @@
-Radtel Peripheral & Pin Summary
+# RT-950 Pro Pinout and Signal Map
 
-| Module | Peripheral / Base | Pins & Signals | Key Firmware Functions | Notes |
-| --- | --- | --- | --- | --- |
-| BK4829 #1 (HW SPI) | SPI1 @ 0x40013000<br>Data: 0x4001300C | PB12 CS via GPIOB BSRR 0x40010C10 / BRR 0x40010C14 | spi_xfer_byte(FUN_8002112c), BK4829_init(FUN_80007f04), RF_Set_Frequency_Synthesizer(FUN_8000b62c) | Historical capture showed PB4 (mask 0x10); current firmware drives PB12 (mask 0x1000). |
-| BK4829 #2 (SW SPI) | GPIOA bit-bang @ 0x40010800<br>SCR 0x40010810 / CLR 0x40010814 | PA5 CS, PA6 SCLK, PA7 MOSI | Software_SPI_Write_Byte(FUN_80021234), Software_SPI_Write_Block(FUN_80021290), Software_SPI_FlashErase4K (FUN_800210c0), Software_SPI_FlashErase32KBlock (FUN_80020f80), Software_SPI_FlashErase64KBlock (FUN_80020ff0) | Second RF front-end path written over GPIO toggles. |
-| SI4732 (Bit-bang I2C / TBD) | GPIOA bit-bang | PA8 SCL, PA9 SDA | (pending rename) | Lines shared with discrete I2C routine; no hardware I2C peripheral observed. |
-| GPS Receiver | USART3 @ 0x40004800 | PC10 TX?, PC11 RX (shared with UART4) | GPS_USART3_Init (FUN_80013f90), FUN_8001403c | Configures 9600 baud NMEA stream; high confidence. PC10/PC11 also remapped by UART4 when Bluetooth accessory is active. |
-| Bluetooth Link (Main) | USART1 @ 0x40013800 | PA9 TX, PA10 RX | Bluetooth_UART1_Init (FUN_8000834c), FUN_80008518 | 115200 baud to on-board BT module (probable). Captured strings include 'BLUETOOTH'. |
-| Accessory Port (Low confidence) | UART4 @ 0x40004C00 | PC10 TX?, PC11 RX (shared with GPS) | Bluetooth_UART4_Init (FUN_800226b0) | 115200 baud, likely routed to side connector for provisioning or external serial; conflicts with GPS pins when enabled. |
-| Keypad Matrix | GPIOC/PD/PE/PA | PC0-3 column drive, PD4-7 row sense, PE5 scan enable, PA12 latch sense | Keypad_ScanMatrix (FUN_80013618), FUN_80012c20, FUN_80012c26 | Rows read from DAT_800136dc (GPIOD IDR) and decoded for 0x70/0xB0/0xD0/0xE0 patterns. |
-| Rotary Encoder | GPIOB | PB4 phase A, PB5 phase B | Encoder_HandleQuadrature (FUN_8000e2e0), FUN_8000e42c | State machine samples masks 0x10 / 0x20 and debounces transitions. |
-| PTT / RF Path Control | GPIOE / GPIOB | PE13 primary PTT, PE12 external PTT, PE14 PA gate, PE7 mic toggle, PB0/PB1 accessory | PTT_Relay_Select (FUN_8001ab04) | Selects TX/RX relay combinations based on parameters; clears PB0/PB1 when idle. |
-| Audio Tone Output (probable) | DAC1 @ 0x40007400 + DMA2 | PA4 DAC_OUT1 (confirmed), PA5 DAC_OUT2 (low confidence) | AudioDMA_Trigger (FUN_8000dca0), ToneMenu_ShowEntry (FUN_8000bd58), ToneGraphic_Draw (FUN_8000cfd4) | Generates CTCSS/AFSK tones via DMA; verify PA5 usage on hardware. |
-| Band / Relay SPI | GPIOE bit-bang | PE15 latch, PE10 clock, PE11 data in, PE8 secondary latch | Band_Relay_ShiftIn (FUN_8001c04c), FUN_8001c68c, FUN_8001c758 | Serial shift interface for RF filter relays; reads back status then programs new codes. |
-| Analog Front-End (ADC) | ADC2 @ 0x40012800 | PA1 channel 1, PA0 channel 0 | ADC_Read_PA1 (FUN_80013c98), ADC_Read_PA0 (FUN_80013cd4), FUN_80003108, FUN_800030a4, FUN_8000309e | Single-shot conversions with 7-cycle sample time; used for audio/AGC sensing. |
-| Analog Front-End (DAC) | DAC @ 0x40007400 | Internal outputs (routed to audio chain) | DAC_Channel_Enable (FUN_8000b368), FUN_8000b388, FUN_8000b3a8 | Enables channels and loads sample registers before playback. |
-| Display Interface | DMA2 + GPIOD[15:8] 8080 bus | PD8-15 data, PD0 WR, PD1 CS, PD3 D/C; PC12 strobe/backlight | Display_BufferFlush (FUN_800037b0), LCD_WriteCommand (FUN_800271c0), LCD_WriteData (FUN_80027220), LCD_SetWindow (FUN_8001cb52), LCD_BlitRectangle (FUN_800156dc) | 16-bit RGB565; 320x240 frame buffer @ 0x20000BD0; DMA2 (0x40020430) streams rows to LCD. |
+This map uses the OEM V0.27 firmware image and reported tests on a radio. The [V0.27 analysis note](rt950-v027-analysis.md) gives the function addresses and limits for each firmware check. The [earlier pin list](pinout-legacy.md) keeps the full set of board labels from prior work.
 
+**Evidence terms:** "Firmware check" means that code in the V0.27 image uses the stated port and pin mask. "Board report" means that another project reports a test on a radio; this review did not repeat that test. A firmware check does not prove the physical signal name.
 
-  
-PA0 = VOX DETECT  
-PA1 = BATTERY DETECT  
-PA2 = SINGLE IN  
-PA3 = BT UART IN  
-PA4 = BEEP OUT  
-PA5 = APC  
-PA6 = FM RESET  
-PA7 = V3FM EN  
-PA8 = GPS ENABLE  
-PA9 = BLUETOOTH RX  
-PA10 = BLUETOOTH TX  
-PA11 = DEVICE POWER OFF  
-PA12 = SK 4?  
-PA13 = SW SDA  
-PA14 = SW CLK  
-PA15 = REPLAY  
-  
+## Signals checked in V0.27
 
-PB0 = V3R ENABLE  
-PB1 = V3T ENABLE  
-PB2 = V3RX ENNABLE  
-PB3 = KEYPAD LIGHT  
-PB4 = EC1  
-PB5 = EC2  
-PB6 = SI4732 SCK  
-PB7 = SI4732 SDA  
-PB8 = MICROPHONE ENABLE  
-PB9 = LB POWER ENABLE  
-PB10 = GPS RX  
-PB11 = GPS TX  
-PB12 = FLASH CS  
-PB13 = FLASH SCK  
-PB14 = FLASH MISO  
-PB15 = FLASH MOSI  
+| Circuit | Port and pins | Evidence status |
+| --- | --- | --- |
+| BK4829 serial bus | PE10 clock, PE11 data, PE8 select for chip 0, PE15 select for chip 1 | Firmware check at `0x0801E260`, `0x0801F090`, and `0x0801F0E4`. |
+| External SPI flash | PB12 chip select; SPI2 base `0x40003800` | Firmware check at `0x08017000`. PB13 clock, PB14 MISO, and PB15 MOSI come from the board pin map and the SPI2 alternate function. |
+| GPS serial port | PB10 with USART3 base `0x40004800` | Firmware check at `0x08016B20`. PB11 as the other serial pin is a board map claim. |
+| Bluetooth serial port | PA9 with USART1 base `0x40013800` | Firmware literal check near `0x0800A578`. PA10 as the other serial pin is a board map claim. |
+| Programming serial port | PC10 and PC11 with UART4 base `0x40004C00` | Firmware setup near `0x08025738`. Connector wiring needs a board check. |
+| Display data bus | PD8 to PD15 | Firmware writes bytes into GPIOD bits 8 to 15 near `0x080297B8`. |
+| Display control | PD0 write strobe, PD1 chip select, PD3 command/data | Firmware check near `0x080297B8` and `0x08029818`. |
+| Backlight | PC6 and PB3 | Firmware check at `0x08017C40`. Both pins change together. |
+| RF path relays | PE13, PE12, PE14, PE7, PB0, PB1 | Firmware check at `0x0801D268`. Check idle levels on the board before a transmit test. |
 
-  
-PC0 = KEYPAD RAS 0  
-PC1 = KEYPAD RAS 1  
-PC2 = KEYPAD RAS 2  
-PC3 = KEYPAD RAS 3  
-PC4 = RF BAND RELAY??  
-PC5 = VSW ENABLE  
-PC6 = LCD BACKLIGHT  
-PC7 = PTT DETECT  
-PC8 = SIDEPORT RX DETECT ??  
-PC9 = SIDEPORT PTT ??  
-PC10 = UART TX  
-PC11 = UART RX  
-PX12 = BEEP SW  
-PC13 = RED LED  
-PC14 = GREEN LED  
-PC15 = SIDEPORT EXTERNAL SPEAKER DETECTED ??  
+An aligned word scan found no SPI1 base address in the V0.27 image. The RF bus checked above uses GPIOE, and the flash setup uses SPI2. Earlier descriptions of a BK4829 on SPI1 and flash on GPIOA do not match these V0.27 functions.
 
-  
+## Pins reported from board work
 
-PD0 = LCD SDA  
-PD1 = LCD CS  
-PD2 = LCD RESET  
-PD3 = LCD RS  
-PD4 = KEYPAD CAS 3  
-PD5 = KEYPAD CAS 2  
-PD6 = KEYPAD CAS 1  
-PD7 = KEYPAD CAS 0  
-PD8 TO PD15 = PARALLEL DATA LINES TO LCD  
-  
+| Circuit | Reported pins | Check still needed |
+| --- | --- | --- |
+| Keypad matrix | PC0 to PC3 columns; PD4 to PD7 rows | The [Hertzz58 pin map](https://github.com/Hertzz58/Radtel-RT950-Pro-Firmware/blob/main/include/rt950_pinmap.h) reports a live GPIO scan. The earlier published scanner address did not identify a scanner in this Ghidra check. |
+| Rotary encoder | PB4 and PB5 | Board report. Read both inputs while the knob turns. |
+| PTT inputs | PE3 and PE2 | Board report. Keep these inputs separate from the RF relay outputs above. |
+| Program buttons | PA12 and PE5 | Firmware check in the bootloader at `0x0800049C`. It reads both pins low twice before update mode. Check the button labels on the radio. |
+| SI4732 serial bus | PB6 clock and PB7 data | Board map claim. This review did not find a reliable V0.27 function at the published address. |
+| Display reset | PD2 | Board map claim. The display control pins in the first table were checked; reset was not. |
+| Status LEDs | PC13 red and PC14 green | Board report. |
 
+The roles of PA0 and PA1 for battery and VOX measurements remain open. The earlier pin list assigns them, but the project pin map reports a conflict. Do not use either role for a displayed battery value until a board test confirms it.
 
-PE0 = POWER SWITCH  
-PE1 = SPEAKER MUTE  
-PE2 = PTT 2  
-PE3 = PTT  
-PE4 = POWER AMP ENABLE  
-PE5 = SIDE KEY 1  
-PE6 = EXTERNAL PTT  
-PE7 = U3T EN  
-PE8 = BK4819 SEN1  
-PE9 = SW TO BT ??  
-PE10 = BK4819 SCK  
-PE11 = BK4819 SDA  
-PE12 = U3R ENABLE  
-PE13 = U6R ENABLE  
-PE14 = SW3T ENABLE  
-PE15 = BK4819 SEN2  
+The [pinout slides](pinout.pptx) give a visual view of MCU pins. The [RF schematic](RT950Pro.pdf) shows RF circuits and signal names. The schematic does not assign all MCU pins.
