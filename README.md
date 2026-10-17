@@ -9,6 +9,7 @@ This repository contains hardware notes, firmware data, and tools for the Radtel
 - [RT950Pro RF schematic](docs/RT950Pro.pdf) shows RF circuits and signal names.
 - [Display notes](docs/display.md), [SPI flash notes](docs/spi_flash.md), and [audio notes](docs/audio_tones.md) record findings from firmware analysis.
 - [V0.27 analysis](docs/rt950-v027-analysis.md) records image checks, pin evidence, and open questions. The [evidence directory](docs/handover-evidence/README.md) contains analysis data, selected decompiled C, and a Ghidra project.
+- [CPS clone protocol notes](docs/cps-clone-protocol.md) record reported clone commands and keep them separate from the OEM firmware update protocol.
 - [Screen photos](docs/screenshots/README.md) show the radio user interface during several operations.
 - [AT32F403A data sheet](Datasheets/DS_AT32F403A_V2.04_EN.pdf) and [AT32F403A/407 reference manual](Datasheets/RM_AT32F403A_407_V2.07_EN.pdf) give MCU data.
 
@@ -20,10 +21,14 @@ This repository contains hardware notes, firmware data, and tools for the Radtel
 - [Bootloader notes](firmware/RE/bootloader/bootloader_protocol_notes.md) describe the update protocol. `bootloader/rt-950pro_bootloader.bin` contains a bootloader image.
 - `firmware/reference firmware/` contains OEM update files, instructions, and code extracted from the updater.
 - `firmware/scripts/` contains firmware and flash tools. `reference project/` and `artery_cortex-m4/` contain AT32 reference code and libraries.
+- `firmware/embargo/` is for local firmware downloads that this repository must not distribute. Git ignores the whole directory.
 
-## Independent Firmware Project
+## External References
 
-[Hertzz58's RT-950 Pro firmware project](https://github.com/Hertzz58/Radtel-RT950-Pro-Firmware) develops open source firmware for this radio. It is a separate project. A local copy under `firmware/radtel-rt950-pro-firmware/` is ignored by this repository; use the link for its source and current status.
+- [Hertzz58's RT-950 Pro firmware project](https://github.com/Hertzz58/Radtel-RT950-Pro-Firmware) has bare-metal firmware, GPIO notes, and flash and CPS tools. The local copy under `firmware/radtel-rt950-pro-firmware/` is ignored by this repository.
+- [NathanBarguss's CHIRP RT-950 Pro project](https://github.com/NathanBarguss/Chirp_Radtel-RT-950-Pro) has a [draft CPS clone protocol report](https://github.com/NathanBarguss/Chirp_Radtel-RT-950-Pro/blob/main/RADIO_PROTOCOL_WIP.md). Our [protocol notes](docs/cps-clone-protocol.md) record the parts used here.
+- [JKI757's RT-950 Pro repository](https://github.com/JKI757/radtel-950-pro) has earlier firmware analysis notes. Its [protocol discussion](https://github.com/JKI757/radtel-950-pro/issues/1) and [reported power-on modes](https://github.com/JKI757/radtel-950-pro/issues/2) are covered in the [V0.27 analysis](docs/rt950-v027-analysis.md). Some earlier pin and bus claims differ from the V0.27 checks.
+- [nicsure's GPIO diagnostic post](https://www.patreon.com/nicsure/posts/nicfw950-gpio-143205329) reports pin names used in our [pinout notes](docs/pinout.md). Its firmware download stays in the ignored local `firmware/embargo/` directory.
 
 ## Next Work
 

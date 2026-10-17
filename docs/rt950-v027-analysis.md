@@ -18,6 +18,10 @@ The 12,288-byte bootloader in `bootloader/rt-950pro_bootloader.bin` has SHA-256 
 
 This check identifies the update-button pins. It does not settle every application signature check or prove a recovery procedure. The [original handover](handover-evidence/source-handover.md) lists those open questions.
 
+[JKI757 issue #1](https://github.com/JKI757/radtel-950-pro/issues/1) questioned a Ghidra project that loaded flash at `0x80000000`. The V0.27 image check above sets the application base to `0x08003000`; the bootloader has its own base at `0x08000000`. The issue also asks whether the CPS image-upload `W` command has an `R` read command. The [CHIRP clone protocol report](cps-clone-protocol.md) documents an `R` command for clone data, but does not answer the image-upload question. The issue reports image upload at offset `0x90000`, but does not establish which memory device holds that data.
+
+[JKI757 issue #2](https://github.com/JKI757/radtel-950-pro/issues/2) reports four power-on key combinations: PTT with OK for factory mode, PTT with 8 for super mode, PTT with 2 for normal mode, and Down for an all-band test mode. The reporter did not establish what these modes do. These are user reports; we did not test them or map the keys to MCU pins. In particular, the PA12 and PE5 bootloader check above does not prove that any of these combinations enters update mode.
+
 ## Pin and bus results
 
 | Function or circuit | Result from V0.27 | Evidence | Limit |
@@ -54,6 +58,8 @@ The project's hardware scan reports a keypad matrix on PC0 to PC3 and PD4 to PD7
 The Hertzz58 project describes 990 channel records, VFO data, settings, fonts, and calibration in external flash. Its headers disagree on some record positions. Read one channel and compare it with a known CPS value before defining a data structure. The project places factory calibration near `0x00F000`; keep that area unchanged during experiments.
 
 The panel ID, display reset, SI4732 pins, ADC input roles, and safe RF relay idle levels remain open. The imported Ghidra project and decompiled C provide data for further checks. They are analysis data from the OEM image, not new firmware source.
+
+[nicsure's GPIO diagnostic post](https://www.patreon.com/nicsure/posts/nicfw950-gpio-143205329) reports pin roles from another firmware experiment. The [current pinout](pinout.md) records the useful agreements and the names that still conflict with V0.27 analysis. Its diagnostic binary is kept only in the ignored local `firmware/embargo/` directory.
 
 ## REA result
 

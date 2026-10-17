@@ -1,6 +1,6 @@
 # RT-950 Pro Pinout and Signal Map
 
-This map uses the OEM V0.27 firmware image and reported tests on a radio. The [V0.27 analysis note](rt950-v027-analysis.md) gives the function addresses and limits for each firmware check. The [earlier pin list](pinout-legacy.md) keeps the full set of board labels from prior work.
+This map uses the OEM V0.27 firmware image and reported tests on a radio. The [V0.27 analysis note](rt950-v027-analysis.md) gives the function addresses and limits for each firmware check. The [earlier pin list](pinout-legacy.md) keeps the full set of board labels from prior work. [nicsure's GPIO diagnostic post](https://www.patreon.com/nicsure/posts/nicfw950-gpio-143205329) gives an independent list of reported pin roles. The downloaded diagnostic firmware stays in the ignored local `firmware/embargo/` directory.
 
 **Evidence terms:** "Firmware check" means that code in the V0.27 image uses the stated port and pin mask. "Board report" means that another project reports a test on a radio; this review did not repeat that test. A firmware check does not prove the physical signal name.
 
@@ -24,14 +24,18 @@ An aligned word scan found no SPI1 base address in the V0.27 image. The RF bus c
 
 | Circuit | Reported pins | Check still needed |
 | --- | --- | --- |
-| Keypad matrix | PC0 to PC3 columns; PD4 to PD7 rows | The [Hertzz58 pin map](https://github.com/Hertzz58/Radtel-RT950-Pro-Firmware/blob/main/include/rt950_pinmap.h) reports a live GPIO scan. The earlier published scanner address did not identify a scanner in this Ghidra check. |
-| Rotary encoder | PB4 and PB5 | Board report. Read both inputs while the knob turns. |
-| PTT inputs | PE3 and PE2 | Board report. Keep these inputs separate from the RF relay outputs above. |
+| Keypad matrix | PC0 to PC3 and PD4 to PD7 | Both the [Hertzz58 pin map](https://github.com/Hertzz58/Radtel-RT950-Pro-Firmware/blob/main/include/rt950_pinmap.h) and [nicsure's list](https://www.patreon.com/nicsure/posts/nicfw950-gpio-143205329) report these pins. They use different row and column names. The earlier published scanner address did not identify a scanner in this Ghidra check. |
+| Rotary encoder | PB4 and PB5 | Both external pin maps report this pair. Read both inputs while the knob turns. |
+| PTT inputs | PE3 and PE2; PC7 detect; PE6 external PTT | nicsure reports all four roles. Hertzz58 reports PE2 and PE3. Keep inputs separate from the RF relay outputs above. |
 | Program buttons | PA12 and PE5 | Firmware check in the bootloader at `0x0800049C`. It reads both pins low twice before update mode. Check the button labels on the radio. |
-| SI4732 serial bus | PB6 clock and PB7 data | Board map claim. This review did not find a reliable V0.27 function at the published address. |
-| Display reset | PD2 | Board map claim. The display control pins in the first table were checked; reset was not. |
-| Status LEDs | PC13 red and PC14 green | Board report. |
+| SI4732 serial bus | PB6 clock and PB7 data | Both external pin maps report this pair. This review did not find a reliable V0.27 function at the published address. |
+| Display reset | PD2 | Both external pin maps report this pin. The display control pins in the first table were checked; reset was not. |
+| Status LEDs | PC13 red and PC14 green | nicsure reports these colors. A board check is still needed. |
+| Power and audio control | PA4 beep, PA8 GPS enable, PA11 power off, PB8 microphone enable, PB9 low-band power, PC5 VSW enable, PE0 power switch, PE1 speaker mute, PE4 power amplifier enable | These names come from [nicsure's diagnostic post](https://www.patreon.com/nicsure/posts/nicfw950-gpio-143205329). This review did not trace the control paths. Check active levels before use. |
+| Other reported control pins | PA2 single input, PA5 APC, PA6 FM reset, PA7 V3FM enable, PA15 replay, PB2 V3RX enable, PC4 RF band relay, PC8 side-port RX detect, PC9 side-port PTT, PC15 external-speaker detect, PE9 switch to Bluetooth | These names come from nicsure. That post marks PC4, PC8, PC9, PC15, and PE9 as uncertain. Their electrical roles remain open. |
 
-The roles of PA0 and PA1 for battery and VOX measurements remain open. The earlier pin list assigns them, but the project pin map reports a conflict. Do not use either role for a displayed battery value until a board test confirms it.
+nicsure reports PA0 as VOX detect and PA1 as battery detect. The earlier pin list agrees, but the Hertzz58 project pin map reports a conflict. The V0.27 check only established ADC use. Measure both pins before using either role for a displayed battery value.
+
+The nicsure post calls PA9 Bluetooth RX, PA10 Bluetooth TX, PB10 GPS RX, and PB11 GPS TX. Those names may use the radio module's point of view. This review checked only PA9 and PB10 in the respective MCU setup code; confirm direction at the connector or module. It also calls PD0 "LCD SDA" and the PE8/PE15 select targets "BK4819." The V0.27 code uses PD0 as a display write strobe and does not identify the radio chip model. Keep these names as reported labels until a board check resolves them. The post prints `PX12` for a beep switch; the port letter needs confirmation.
 
 The [pinout slides](pinout.pptx) give a visual view of MCU pins. The [RF schematic](RT950Pro.pdf) shows RF circuits and signal names. The schematic does not assign all MCU pins.

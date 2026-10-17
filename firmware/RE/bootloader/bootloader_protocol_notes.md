@@ -4,7 +4,7 @@ _Last updated: $(date)_
 
 ## Captured Protocol Overview
 
-The USB updater that ships with the radio speaks a very small CDC/ACM binary protocol. The same framing is visible in both the `upgrade` and `fullflash` captures:
+The USB updater that ships with the radio speaks a very small CDC/ACM binary protocol. The same framing is visible in both the `upgrade` and `fullflash` captures. The [CPS clone protocol](../../../docs/cps-clone-protocol.md) uses a different session and block format; its `R` command does not establish a read command in this updater:
 
 - Each frame starts with `0xAA`, ends with `0x55`.
 - Bytes `[1..2]` carry the command identifier; the device mirrors the same byte in ACKs.
