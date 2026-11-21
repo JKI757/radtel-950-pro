@@ -5,3 +5,5 @@ sample_code/
 archive-mostly-garbage/
 /firmware/radtel-rt950-pro-firmware/
 /firmware/embargo/
+__pycache__/
+*.pyc
